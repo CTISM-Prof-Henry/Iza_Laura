@@ -6,7 +6,7 @@
 <body>
     <h1>output</h1>
 
-    <p>
+    <p id="texto">
         A tag <b>output</b> representa o resultado de um cálculo. É possível usar o sinal de mais (+) e o símbolo de
         igual (=) para indicar que o primeiro e o segundo valores de entrada devem ser “enviados” para o tag de saída;
         você pode denotar isso com um atributo <b>for</b> contendo os IDs dos dois elementos a serem combinados.
@@ -26,5 +26,63 @@
 
 </form>
 
+<form>
+    <button onclick="trocafundo()">Trocar a cor do fundo</button>
+
+</form>
 </body>
+
+
+<script type="text/javascript">
+
+    function trocatexto(){
+
+        let paragrafo = document.getElementById("texto");
+
+        if(paragrafo.textContent === 'A tag <b>output</b> representa o resultado de um cálculo. É possível usar o sinal de mais (+) e o símbolo de
+        igual (=) para indicar que o primeiro e o segundo valores de entrada devem ser “enviados” para o tag de saída;
+        você pode denotar isso com um atributo <b>for</b> contendo os IDs dos dois elementos a serem combinados.'){
+
+            paragrafo.textContent = 'Hello World! Esse é o primeiro parágrafo!';
+
+        }	
+        else{
+
+            paragrafo.textContent = 'A tag <b>output</b> representa o resultado de um cálculo. É possível usar o sinal de mais (+) e o símbolo de
+        igual (=) para indicar que o primeiro e o segundo valores de entrada devem ser “enviados” para o tag de saída;
+        você pode denotar isso com um atributo <b>for</b> contendo os IDs dos dois elementos a serem combinados.';
+        }
+    }
+
+    function trocafonte(){
+        
+        let paragrafo = document.getElementById("texto");
+
+        if(paragrafo.style.fontFamily === 'Times New Roman'){
+            
+            paragrafo.style.fontFamily = 'Arial';
+
+        } 
+        else {
+            paragrafo.style.fontFamily = 'Times New Roman';
+        }
+
+    }
+
+    function trocafundo(){
+
+        if(document.bgColor === '#FFFFFF'){
+
+            document.bgColor = '#1E90FF';
+
+        }
+        else {
+
+            document.bgColor = '#FFFFFF';
+
+        }
+    }
+
+
+</script>
 </html>
